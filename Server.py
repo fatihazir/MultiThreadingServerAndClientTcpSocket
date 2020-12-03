@@ -40,7 +40,7 @@ def Start():
         conn, addr = server.accept()
         thread = threading.Thread(target=DealWithClient, args=(conn,addr)) #CREATİNG A NEW THREAD
         thread.start()
-        print(f"Connection is active. Number of available threads: {threading.active_count()-1}")
+        print(f"Connection is active. Thread: {threading.active_count()-1}")
 
 print("Server is starting...")
 Start()
